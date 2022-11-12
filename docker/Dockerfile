@@ -7,14 +7,14 @@ LABEL authors="howardhung1007@gmail.com"
 WORKDIR /usr/src/app
 
 # copy your package*.json to image
-COPY package*.json ./
+COPY ../package*.json ./
 
 # cmd for image
 # npm ci to use package-lock.json, fix the version
 RUN npm ci
 
 # bundle your app's source code inside the Docker image
-COPY . .
+COPY ../. .
 
 # port
 EXPOSE 3000
