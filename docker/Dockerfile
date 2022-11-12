@@ -16,11 +16,11 @@ RUN npm ci
 # bundle your app's source code inside the Docker image
 COPY . .
 
-RUN npm run build
+# RUN npm run build
 
 # port
 EXPOSE 3000
 
 # cmd for docker start
 # CMD ["npm", "run", "start"]
-CMD ["node", "dist/src/main.js"]
+# CMD ["node", "dist/src/main.js"]
