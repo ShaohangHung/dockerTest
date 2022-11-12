@@ -23,4 +23,4 @@ EXPOSE 3000
 
 # cmd for docker start
 # CMD ["npm", "run", "start"]
-CMD ["node", "dist/src/main.js"]
+CMD ["node", "dist/main.js"]
