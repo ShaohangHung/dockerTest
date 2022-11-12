@@ -30,3 +30,16 @@ docker run --name test -p 3000:3000 -d test:v6
 ```
 docker logs test -f
 ```
+
+### push image to docker hub
+## add tag
+## make image name be your dockerhub's repository and tag.
+```
+docker tag test howardhung/test:v8
+```
+
+## docker login
+## docker push
+```
+docker push howardhung/test:v8
+```
