@@ -1,3 +1,10 @@
+# What is Docker?
+Docker是一種快速打包的技術，具備標準化、輕量、易移植的優點
+
+# Docker VS VM
+![title](./pictures/Container%20vs%20VM.png)
+
+
 # Docker CMD (Container)
 
 ## Docker run
@@ -24,6 +31,21 @@ docker logs test -f
 
 ```
 docker exec -it test bash
+```
+
+## stop container for a batch
+```
+docker stop id1 id2 id3
+```
+
+## rm container for a batch
+```
+docker rm $(docker container ps -aq)
+```
+
+## delete useless containers and images
+```
+docker system prune -a -f
 ```
 
 # Docker CMD (Image)
