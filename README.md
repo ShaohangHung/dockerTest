@@ -91,3 +91,15 @@ docker push howardhung/test:v8
 ```
 docker pull howardhung/test:v8
 ```
+
+## export a image
+### -o output file name
+```
+docker save howardhung/test:v8 -o test.image
+```
+
+## import a image
+### -i input file name
+```
+docker load -i ./test.image
+```
