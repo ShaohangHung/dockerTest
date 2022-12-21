@@ -18,6 +18,7 @@ COPY . .
 # cmd for image
 # npm ci to use package-lock.json, fix the version
 RUN apt-get update && \
+    apt-get install vim && \
     npm ci && \
     npm run build
 
