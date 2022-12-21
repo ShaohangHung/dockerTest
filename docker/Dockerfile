@@ -12,14 +12,14 @@ WORKDIR /usr/src/app
 # copy your package*.json to image
 COPY package*.json ./
 
+# bundle your app's source code inside the Docker image
+COPY . .
+
 # cmd for image
 # npm ci to use package-lock.json, fix the version
 RUN apt-get update && \
     npm ci && \
     npm run build
-
-# bundle your app's source code inside the Docker image
-COPY . .
 
 # port
 EXPOSE 3000
