@@ -1,4 +1,7 @@
 # image來源
+# 1.choose a official Image
+# 2.choose a fixed version tag
+# 3.choose a smaller size image
 FROM node:latest
 
 LABEL authors="howardhung1007@gmail.com"
@@ -11,12 +14,12 @@ COPY package*.json ./
 
 # cmd for image
 # npm ci to use package-lock.json, fix the version
-RUN npm ci
+RUN apt-get update && \
+    npm ci && \
+    npm run build
 
 # bundle your app's source code inside the Docker image
 COPY . .
-
-RUN npm run build
 
 # port
 EXPOSE 3000
