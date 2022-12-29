@@ -13,12 +13,12 @@ RUN echo "VERSION=$VERSION"
 WORKDIR /usr/src/app
 
 # copy your package*.json to image
-COPY package*.json ./
+# COPY package*.json ./
 
 # bundle your app's source code inside the Docker image
 COPY . .
 
-# cmd for image
+
 # npm ci to use package-lock.json, fix the version
 RUN apt-get update && \
     apt-get install -y vim && \
