@@ -7,6 +7,8 @@ ENV VERSION=1.0.1
 
 LABEL authors="howardhung1007@gmail.com"
 
+RUN echo "VERSION=$VERSION"
+
 # create a directory to hold the application code inside the image
 WORKDIR /usr/src/app
 
