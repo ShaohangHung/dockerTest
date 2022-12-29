@@ -11,3 +11,5 @@
 ## ENV : declare a parameter which can be used in container
 
 ## CMD : run container 時默認執行的命令, 如果再docker run時另外有指定其他命令，則此命令會被忽略
+
+## ENTRYPOINT : 和CMD類似
