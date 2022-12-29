@@ -10,3 +10,4 @@
 
 ## ENV : declare a parameter which can be used in container
 
+## CMD : run container 時默認執行的cmd, 如果再docker run時另外有指定其他命令，則此命令會被忽略

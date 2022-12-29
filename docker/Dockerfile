@@ -18,10 +18,11 @@ COPY . .
 
 # cmd for image
 # npm ci to use package-lock.json, fix the version
-RUN npm ci && \
+RUN apt-get update && \
+    apt-get install -y vim && \
+    npm ci && \
     npm run build
-    # apt-get update && \
-    # apt-get install vim && \
+
     
 # port
 EXPOSE 3000
