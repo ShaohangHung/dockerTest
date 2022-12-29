@@ -64,8 +64,10 @@ docker rmi $(docker images -q)
 
 ### -f find the Dockerfile you want to build with
 
+### --build-env change a parameter's value
+
 ```
-docker build --no-cache -t test:v8 -f docker/Dockerfile .
+docker build --no-cache -t test:v8 -f docker/Dockerfile --build-env VERSION=2.0.0 .
 ```
 
 ## Push image to docker hub
