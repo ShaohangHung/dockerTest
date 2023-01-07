@@ -15,8 +15,11 @@ Docker是一種快速打包的技術，具備標準化、輕量、易移植的�
 
 ### -p outsideport:containerport
 
+### -v volume_name:container's directory
+### -v file_path:container's directory = mount
+
 ```
-docker run --name test -p 3000:3000 -d test:v6
+docker run --name test -p 3000:3000 -d -v cron-data:/app test:v6
 ```
 
 ## Watch container's log
@@ -111,3 +114,5 @@ docker load -i ./test.image
 由Docker管理, 存放在Linux /var/lib/docker/volumes/ 路徑底下
 ### Bind Mount
 
+## 不同VM間共享資料方式
+### install plugin vieux/sshfs
