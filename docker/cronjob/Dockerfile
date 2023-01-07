@@ -10,5 +10,10 @@ RUN curl -fsSLO "$SUPERCRONIC_URL" \
     && mv "$SUPERCRONIC" "/usr/local/bin/${SUPERCRONIC}" \
     && ln -s "/usr/local/bin/${SUPERCRONIC}" /usr/local/bin/supercronic
 COPY my-cron /app/my-cron
+
+WORKDIR /app
+
+VOLUME [ "/app" ]
+
 # RUN cron job
 CMD ["/usr/local/bin/supercronic", "/app/my-cron"]
