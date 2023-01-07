@@ -18,7 +18,6 @@ COPY helloworld.js /usr/src/app/
 # npm ci to use package-lock.json, fix the version
 # RUN npm ci
 
-
 # port
 # EXPOSE 3000
 

@@ -105,3 +105,9 @@ docker save howardhung/test:v8 -o test.image
 ```
 docker load -i ./test.image
 ```
+
+## 資料持久化的方式
+### Data Volume
+由Docker管理, 存放在Linux /var/lib/docker/volumes/ 路徑底下
+### Bind Mount
+

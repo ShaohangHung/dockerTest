@@ -13,3 +13,5 @@
 ## CMD : run container 時默認執行的命令, 如果再docker run時另外有指定其他命令，則此命令會被忽略
 
 ## ENTRYPOINT : 和CMD類似
+
+## 建置image時，可為該image建立一個特別用戶，避免其他人利用進入container內用root權限進行操作
