@@ -22,7 +22,7 @@ RUN apt-get update && \
     npm run build
 
     
-# port
+# port, it functions as a type of documentation. use the -p flag on "docker run" to publsih and mapping.
 EXPOSE 3000
 
 # cmd for docker start

@@ -18,8 +18,10 @@ Docker是一種快速打包的技術，具備標準化、輕量、易移植的�
 ### -v volume_name:container's directory
 ### -v file_path:container's directory = mount
 
+### --network mybridge choose the bridge which container locates
+
 ```
-docker run --name test -p 3000:3000 -d -v cron-data:/app test:v6
+docker run --name test -p 3000:3000 -d --network mybridge -v cron-data:/app test:v6
 ```
 
 ## Watch container's log
@@ -116,3 +118,4 @@ docker load -i ./test.image
 
 ## 不同VM間共享資料方式
 ### install plugin vieux/sshfs
+
