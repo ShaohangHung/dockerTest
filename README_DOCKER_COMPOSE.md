@@ -4,7 +4,7 @@
 
 # docker-compose file specification example:
 ```
-version: "3.8"
+version: "9.9"
 
 services:
     servicename:
