@@ -8,8 +8,16 @@ services:
         volumes:
         networks:
         ports:
+        depends_on: #等到serviceName啟動完才執行
+            - serviceName
     servicename2:
+
 
 volumes:
 
 networks:
+    mynetwork1:
+        ipam:
+            driver: default
+            config:
+                - subnet: "172.16.238.0/24"

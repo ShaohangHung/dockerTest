@@ -2,8 +2,13 @@
 
 # docker-compose up -p 
 ### -p name the container prefix
+### -d run container in background
+
+### --build compare with images and rebuild the image which has changed.
+
+### --scale you can create more there same service as the number you set
 ```
-docker-compose up -p myproject up -d 
+docker-compose up -p myproject up -d --build --scale servicename=3
 ```
 
 # docker-compose down

@@ -119,3 +119,8 @@ docker load -i ./test.image
 ## 不同VM間共享資料方式
 ### install plugin vieux/sshfs
 
+# get something detail
+```
+docker network inspect box1
+docker container inspect box1
+```

@@ -25,6 +25,10 @@ RUN apt-get update && \
 # port, it functions as a type of documentation. use the -p flag on "docker run" to publsih and mapping.
 EXPOSE 3000
 
+# check if server is working without error
+HEALTHCHECK --interval=30s --timeout=3s \
+    CMD curl -f http://localhost:5000/ || exit 1
+
 # cmd for docker start
 # CMD ["npm", "run", "start"]
 CMD ["node", "dist/main.js"]
